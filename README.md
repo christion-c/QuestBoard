@@ -1,50 +1,190 @@
-# Welcome to your Expo app 👋
+# QuestBoard
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+QuestBoard is an ADHD-friendly task and reward application built with React Native, Expo, and TypeScript.
 
-## Get started
+The application is designed to reduce task paralysis and decision fatigue by helping users:
 
-1. Install dependencies
+* Capture tasks quickly
+* Break large tasks into manageable steps
+* Assign custom point values
+* Filter tasks by energy and available time
+* Earn points for completed work
+* Create and redeem personal rewards
+* Focus on one useful next action
+* Review progress without punitive streak mechanics
 
-   ```bash
-   npm install
-   ```
+## Product Principles
 
-2. Start the app
+QuestBoard follows several core principles:
 
-   ```bash
-   npx expo start
-   ```
+1. **Reduce visual overload**
+   The interface should prioritize the most relevant tasks rather than displaying the entire backlog at once.
 
-In the output, you'll find options to open the app in a
+2. **Make starting easier**
+   Tasks can include small first steps, short time estimates, and low-energy labels.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+3. **Reward progress, not perfection**
+   Users earn points for completing meaningful actions. Missed days do not erase prior progress.
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+4. **Keep the system flexible**
+   Users control task values, rewards, categories, energy levels, and planning style.
 
-## Get a fresh project
+5. **Use supportive language**
+   The application should encourage users without shame, punishment, or manipulative streak mechanics.
 
-When you're ready, run:
+## Planned Core Features
 
-```bash
-npm run reset-project
+### Authentication
+
+* Email registration
+* Email login
+* Persistent sessions
+* Profile management
+* Account deletion
+
+### Tasks
+
+* Create, edit, and delete tasks
+* To Do, In Progress, and Completed statuses
+* Custom task point values
+* Energy-level labels
+* Time estimates
+* Optional due dates
+* Categories
+* Subtasks
+* Today, This Week, and Later planning groups
+
+### Points
+
+* Points awarded when tasks are completed
+* Points reversed when tasks are reopened
+* Immutable point transaction history
+* Current spendable balance
+* Lifetime points earned
+
+### Rewards
+
+* User-created rewards
+* Custom point costs
+* Reward redemption
+* Redemption history
+* Progress toward a selected reward
+
+### ADHD-Friendly Tools
+
+* Quick task capture
+* Low-energy task filter
+* Short-task filter
+* “Just Start” focus timer
+* Suggested next task
+* Task breakdown
+* Reduced-motion setting
+* Optional celebration feedback
+* Non-punitive progress summaries
+
+## Technology Stack
+
+The initial technology plan includes:
+
+* React Native
+* Expo
+* Expo Router
+* TypeScript
+* Firebase Authentication
+* Firebase Firestore
+* Redux Toolkit
+* React Redux
+* AsyncStorage
+* Jest
+* React Native Testing Library
+* EAS Build
+
+The architecture may evolve as the product requirements become clearer.
+
+## Development Approach
+
+QuestBoard will be developed incrementally:
+
+1. Establish the project foundation and design system
+2. Build reusable interface components
+3. Add navigation and placeholder screens
+4. Configure Firebase Authentication
+5. Implement task CRUD and real-time synchronization
+6. Add the point transaction system
+7. Add custom rewards and redemption
+8. Add ADHD-friendly planning tools
+9. Add accessibility and customization settings
+10. Add tests, privacy controls, and deployment configuration
+
+Each feature should remain modular and independently testable.
+
+## Planned Project Structure
+
+```text
+QuestBoard/
+├── app/
+├── components/
+├── constants/
+├── contexts/
+├── features/
+├── hooks/
+├── services/
+├── store/
+├── types/
+├── utils/
+├── __tests__/
+├── assets/
+├── app.json
+├── package.json
+└── README.md
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Current Status
 
-## Learn more
+The project has been initialized as a clean Expo and TypeScript application.
 
-To learn more about developing your project with Expo, look at the following resources:
+The next development stage will establish:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+* Project folders
+* Color and spacing constants
+* Typography
+* Reusable buttons
+* Reusable form controls
+* Initial navigation
+* Placeholder screens for Today, Board, Rewards, and Profile
 
-## Join the community
+## Running the Project
 
-Join our community of developers creating universal apps.
+Install dependencies:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+```bash
+npm install
+```
+
+Start Expo:
+
+```bash
+npm start
+```
+
+Start with a cleared cache:
+
+```bash
+npx expo start --clear
+```
+
+Run type checking:
+
+```bash
+npx tsc --noEmit
+```
+
+Run linting:
+
+```bash
+npm run lint
+```
+
+## Development Status
+
+QuestBoard is currently under active development and is not yet ready for production use.
